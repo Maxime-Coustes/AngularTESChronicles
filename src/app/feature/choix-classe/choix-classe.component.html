@@ -1,0 +1,19 @@
+<h1>
+  Choisissez votre Classe ...
+</h1>
+<br>
+
+<div class="container col-md-8 ">
+  <div class="row" *ngIf="classeCollection">
+      <span  *ngFor="let classe of classeCollection" 
+       class="col-md-3">
+        <div (click)="onChoice(classe.id)">
+          <div class="text-center nomMiniature">{{classe.nom}}</div>
+          <img class="miniatures" src="{{classe.url}}" popover="{{classe.popover}}" 
+          triggers="mouseenter:mouseleave" placement="left"  />
+        </div>
+      </span>
+  </div>
+</div>
+
+<!-- routerLink="/{{classe.id}}" -->

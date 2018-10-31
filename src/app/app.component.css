@@ -1,0 +1,10 @@
+#background {
+    /* background-image: url("https://i.pinimg.com/originals/79/78/fe/7978fe4620e624116664f5d2ff9134b6.jpg"); */
+    background-image: url(/assets/images/bckparch.jpg);
+    background-size: cover;
+    height: 1600px ;
+    z-index: -1;
+}
+* {
+     font-family: 'Eagle Lake', cursive;
+}

@@ -1,0 +1,67 @@
+<p>
+  Vous souhaitez créer un 
+  <span class="classeCharac">{{personnageDTO.classe.nom}}</span> !!!
+</p>
+<p>Nous vous recommandons de privilégier les caractéristiques suivantes:
+  <!-- <span class="classeCharac">{{classe.recommandation}}</span> -->
+  <span class="infoClasseCharac">{{personnageDTO.classe.infosClasse}}</span>
+</p>
+<br>
+
+<button (click)="generateD20()"> test D20: </button>
+<div *ngIf="resultatGenere" style="margin-left: 50px"class="col-lg-1 emplacementCarac">
+  {{resultatGenere}}</div>
+<br>
+<button (click)="generate4D6()"> test 4D6 (trois plus grandes valeurs): </button>
+<br>
+
+<div class="container">
+ 
+<!--  définie pour angular, n'apparait qu'au besoin-->
+  <ng-template #itemTemplate let-item="item" let-index="index">
+    <div class="row no-gutters">
+      <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{caracs.caracteristiques[index].nom}}</div>
+      <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{sortableCarac[index]}}</div>
+      <div class="col emplacementCarac">{{sortableCarac[index] | modifCarac }}</div>
+    </div>
+  </ng-template>
+  
+  <div class="row">
+    <div class="col-lg-3">
+      <!-- Statique -->
+      <ng-container *ngIf="!sortableCarac">
+        <div class="row no-gutters" *ngFor="let carac of caracs.caracteristiques">
+          <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{carac.nom | uppercase}}</div>
+          <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;"></div>
+        </div>
+      </ng-container>
+
+      <!-- Sortable -->
+      <ng-container *ngIf="sortableCarac">
+        <bs-sortable 
+        (onChange)="onChange()"
+        [(ngModel)]="sortableCarac"
+        itemClass="sortable-item" 
+        itemActiveClass="sortable-item-active"
+        placeholderItem="Drag here"
+        placeholderClass="placeholderStyle"
+        wrapperClass="sortable-wrapper"
+        [itemTemplate]="itemTemplate"
+        ></bs-sortable> 
+      </ng-container>
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-3">
+      Cliquez sur le bouton "générer" puis
+      faites glisser les valeurs et classez les de bas en haut salon votre choix.
+    </div>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-3">
+      La première colonne est le nom de votre caractéristique, la deuxième est sa valeur et la troisième
+       correspond au bonus lié à la valeur.
+    </div>
+    </div>
+
+    <a class="button" routerLink="/classe/generationCarac/identite">NEXT...</a>
+
+</div>

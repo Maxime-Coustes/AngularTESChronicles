@@ -1,0 +1,14 @@
+<p>
+  Choisissez de quelle peuple est issu votre personnage !
+</p>
+<br>
+  <div class="container col-md-8 ">
+    <div class="row" *ngIf="raceCollection">
+      <span *ngFor="let race of raceCollection" class="col-md-3">
+        <div (click)="onChoice(race.id)">
+          <div class="text-center nomMiniature">{{race.nom}}</div>
+           <img class="miniatures" src="{{race.url}}"/>
+        </div>
+      </span>
+    </div>
+  </div>

@@ -1,0 +1,32 @@
+* {
+    font-size: 20px;
+}
+
+p {
+    margin-left: 50px;
+}
+
+button {
+    margin-left: 50px;
+}
+
+.emplacementCarac {
+    border-style: solid;
+    border-width: 2px;
+    background-color: lightgray;
+    margin-top: 10px; 
+    margin-right: 1px;
+    font-family: 'Eagle Lake', cursive;
+    text-align: center;
+}
+.classeCharac {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.infoClasseCharac {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+

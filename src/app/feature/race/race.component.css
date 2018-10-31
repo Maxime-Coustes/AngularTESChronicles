@@ -1,0 +1,13 @@
+h3 {
+    text-align: center;
+}
+
+.miniatures {
+    height: 250px;
+    width:200px;
+}
+
+.nomMiniature {
+    font-size: 25px;
+    color: black;
+}

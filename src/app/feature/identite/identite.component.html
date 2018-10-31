@@ -1,0 +1,31 @@
+<div class="row no-gutters">
+  <case-info-component [valeur]="personnageDTO.identite.prenom" [placeholder]="'Prénom'" (onChange)="personnageDTO.identite.prenom=$event"></case-info-component>
+
+  <case-info-component [valeur]="personnageDTO.identite.nom" [placeholder]="'Nom'" (onChange)="personnageDTO.identite.nom=$event"></case-info-component>
+</div>
+<div class="row no-gutters">
+  <!-- <case-info-component [valeur]="identiteDTO.sexe" [placeholder]="'Sexe'" (onChange)="identiteDTO.sexe=$event"></case-info-component> -->
+  <case-info-component [valeur]="personnageDTO.identite.religion" [placeholder]="'Religion Facultatif'" (onChange)="personnageDTO.identite.religion=$event"></case-info-component>
+  <case-info-component [valeur]="personnageDTO.identite.taille" [placeholder]="'Taille Facultative'" (onChange)="personnageDTO.identite.taille=$event"></case-info-component>
+</div>
+<div class="row no-gutters">
+  <case-info-component [valeur]="personnageDTO.identite.poids" [placeholder]="'Poids Facultatif'" (onChange)="personnageDTO.identite.poids=$event"></case-info-component>
+  <case-info-component [valeur]="personnageDTO.identite.age" [placeholder]="'Age Facultatif'" (onChange)="personnageDTO.identite.age=$event"></case-info-component>
+</div>
+
+<div class="row no-gutters">
+  <dropdown-component [valeur]="personnageDTO.identite.sexe" (onChange)="personnageDTO.identite.sexe=$event"></dropdown-component>
+</div>
+
+<button (click)="checkdto()">Check</button> 
+
+<div>
+  <a class="button" routerLink="/classe/generationCarac/identite/race">
+    Choisir de quel peuple est issu votre personnage.</a>
+</div>
+<!-- <div>
+  <a class="button" routerLink="/classe/generationCarac/identite/resume">
+    Voir un résumé de votre personnage</a>
+</div> -->
+
+<!-- <personnage-component></personnage-component> -->
