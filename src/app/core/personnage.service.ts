@@ -16,7 +16,7 @@ export class PersonnageService {
     }
 
     get() {
-        return this.localStorageService.getObject('personnage');
+        return    this.localStorageService.getObject('personnage');
     }
 
 }
