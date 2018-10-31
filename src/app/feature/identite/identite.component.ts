@@ -35,9 +35,10 @@ export class IdentiteComponent implements OnInit {
     console.log(this.personnageDTO);
   }
 
-  checkdto() {
+  checkDto() {
     this.personnageService.set(this.personnageDTO);
     console.log(this.personnageService.get());
     this.router.navigate(['classe/generationCarac/identite/resume']);
   }
+
 }

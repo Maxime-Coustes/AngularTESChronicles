@@ -8,6 +8,9 @@ import { LocalStorageService } from 'app/core/localStorage.service';
 
 export class IdentiteService {
 
+    nom: Identite['nom'];
+    prenom: Identite['prenom'];
+
     constructor(
         private localStorageService: LocalStorageService
     ) { }
@@ -19,13 +22,12 @@ export class IdentiteService {
     get() {
         return this.localStorageService.getObject('identite');
     }
-    /* id: string;
-    nom: string;
-    prenom: string;
-    classe: string;
-    sexe: string;
-    religion?: string;
-    age?: number;
-    taille?: string;
-    poids?: string; */
+
+    getNom(identiteDTO: Identite) {
+        return this.localStorageService.getObject('nom');
+    }
+    getPrenom(identiteDTO: Identite) {
+        return this.localStorageService.getObject('prenom');
+    }
+
 }
