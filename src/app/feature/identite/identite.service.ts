@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Identite } from './identite';
-import { LocalStorageService } from '/home/maxime/workspaceMax/angular-feuille-de-personnage/src/app/core/localStorage.service';
+import { LocalStorageService } from 'app/core/localStorage.service';
 
 @Injectable()
 

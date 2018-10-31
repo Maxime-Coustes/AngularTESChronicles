@@ -3,7 +3,7 @@ import { RaceCollection } from './in-memory-data-race';
 import { Observable } from 'rxjs/Observable';
 import { Race } from './race';
 import { ChoixRaceService } from './choix-race.service';
-import { RaceService } from '/home/maxime/workspaceMax/angular-feuille-de-personnage/src/app/core/race.service';
+import { RaceService } from 'app/core/race.service';
 import { Personnage } from '../personnage/personnage';
 import { Router, ParamMap, ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/switchMap';

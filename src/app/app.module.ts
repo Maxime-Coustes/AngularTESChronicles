@@ -9,7 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { BsDropdownModule } from 'ngx-bootstrap';
 import { PersonnageModule } from 'app/feature/personnage/personnage.module';
 import { RaceModule } from 'app/feature/race/race.module';
-import { IdentiteModule } from '/home/maxime/workspaceMax/angular-feuille-de-personnage/src/app/feature/identite/identite.module';
+import { IdentiteModule } from 'app/feature/identite/identite.module';
 
 import { Personnage } from 'app/feature/personnage/personnage';
 

@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RaceComponent } from './race.component';
 import { RaceCollection } from './in-memory-data-race';
 import { ChoixRaceService } from './choix-race.service';
-import { RaceService } from '/home/maxime/workspaceMax/angular-feuille-de-personnage/src/app/core/race.service';
+import { RaceService } from 'app/core/race.service';
 
 @NgModule({
   imports: [
