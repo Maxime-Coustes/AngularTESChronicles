@@ -32,13 +32,13 @@ export class IdentiteComponent implements OnInit {
 
   ngOnInit() {
     this.personnageDTO = this.personnageService.get();
-    console.log(this.personnageDTO);
+    console.log('console log de ngOnInit dans identiteComponent', this.personnageDTO);
   }
 
   checkDto() {
     this.personnageService.set(this.personnageDTO);
-    console.log(this.personnageService.get());
-    this.router.navigate(['classe/generationCarac/identite/resume']);
+    console.log('checkDto dans identiteComponent', this.personnageService.get());
+    this.router.navigate(['classe/generationCarac/identite/race']);
   }
 
 }

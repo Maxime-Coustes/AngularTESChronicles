@@ -28,15 +28,11 @@ export class RaceComponent implements OnInit {
     private localStorageService: LocalStorageService,
   ) { }
 
-  /* ngOnInit() {
-    this.raceService.getRaces().subscribe(observable => this.raceCollection = observable);
-  } */
-
-
   ngOnInit() {
     // j'appelle la methode du service, qui est un observable donc on s'y abonne
     // et avec le resultat (observable) je le mets dans classe collection
     this.choixRaceService.getRaces().subscribe(observable => this.raceCollection = observable);
+
     this.personnageDTO = new Personnage();
     this.personnageDTO.race = new Race();
   }
@@ -45,12 +41,21 @@ export class RaceComponent implements OnInit {
     this.choixRaceService.getRace(id).subscribe(observable => {
       this.personnageDTO.race = observable;
       this.raceService.set(this.personnageDTO.race);
-      // redirection vers la preahine étape
+      // redirection vers la prochaine étape
       // 'classe/generationCarac/:id/:slugName'
       this.router.navigate(['classe/generationCarac/identite/race/resume']);
     }
     );
-
   }
+ /*  onChoice(id) {
+    this.choixRaceService.getRace(id).subscribe(observable => {
+      this.personnageDTO.race = observable;
+      this.raceService.set(this.race);
+      // redirection vers la prochaine étape
+      // 'classe/generationCarac/:id/:slugName'
+      this.router.navigate(['classe/generationCarac/identite/race/resume']);
+    }
+    );
+  } */
 
 }

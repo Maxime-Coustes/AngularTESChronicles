@@ -12,6 +12,10 @@ import { RaceService } from 'app/core/race.service';
   declarations: [
     RaceComponent,
   ],
+  exports:
+  [
+    RaceComponent
+  ],
   providers: [
     ChoixRaceService,
     RaceService

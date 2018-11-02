@@ -8,9 +8,6 @@ import { LocalStorageService } from 'app/core/localStorage.service';
 
 export class IdentiteService {
 
-    nom: Identite['nom'];
-    prenom: Identite['prenom'];
-
     constructor(
         private localStorageService: LocalStorageService
     ) { }

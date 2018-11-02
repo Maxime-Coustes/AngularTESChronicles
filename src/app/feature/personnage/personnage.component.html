@@ -6,23 +6,17 @@
   Vous souhaitez donc créer un
   <span>{{personnageDTO.classe.nom}}.</span> 
 </p>
-<!-- <p>
-  du peuple
-  <span>{{personnageDTO.race.nom}}.</span>
-</p> -->
+<p>
+  issu du peuple   <!--  réponse error :  "personnageDTO.race undefined" -->
+  <span> <!-- {{personnageDTO.race.nom}} --> .</span>
+</p>
 <p>
   du nom de <span> {{personnageDTO.identite.prenom}} {{personnageDTO.identite.nom}},</span>
 </p>
 <p>
-  et dont les carac sont: 
+  et dont les caractéristiques sont: 
 </p>
-<!--<div class="container no-gutters">
-  <div *ngFor="let carac of personnageDTO.caracteristiques" class="col-lg-3">
-    <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{carac.nom | uppercase}}</div>
-    <!-- {{personnageDTO.caracteristiques[0].valeur}} à changer pour que chaque valeur soit celle de sa caractéristique -->
-    <!--<div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{personnageDTO.caracteristiques[0].valeur}}</div>
-  </div>
-</div>-->
+
 <div class="container no-gutters">
   <div>
     <span>{{personnageDTO.caracteristiques[0].nom}}</span>

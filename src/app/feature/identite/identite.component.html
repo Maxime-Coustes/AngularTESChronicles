@@ -17,12 +17,9 @@
   <dropdown-component [valeur]="personnageDTO.identite.sexe" (onChange)="personnageDTO.identite.sexe=$event"></dropdown-component>
 </div>
 
-<button (click)="checkDto()">Check</button> 
+<button (click)="checkDto()" >Choisir de quel peuple est issu votre personnage</button> 
 
-<div>
-  <a class="button" routerLink="/classe/generationCarac/identite/race">
-    Choisir de quel peuple est issu votre personnage.</a>
-</div>
+
 <!-- <div>
   <a class="button" routerLink="/classe/generationCarac/identite/resume">
     Voir un résumé de votre personnage</a>

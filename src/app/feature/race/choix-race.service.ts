@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 import { Race } from './race';
 import { RaceCollection } from './in-memory-data-race';
 import { Router, ParamMap, ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'app/core/localStorage.service';
 
 
 const httpOptions = {
@@ -18,11 +19,22 @@ export class ChoixRaceService {
     // propriété
     private raceCollection = RaceCollection;
 
-    constructor() { }
+    constructor(
+        private localStorageService: LocalStorageService
+    ) { }
+
+    set(raceDTO: Race) {
+        this.localStorageService.setObject('race', raceDTO);
+    }
+
+    get() {
+        return this.localStorageService.getObject('race');
+    }
 
     getRaces(): Observable<Race[]> {
         return Observable.create(observer => observer.next(RaceCollection));
     }
+
     getRace(id): Observable<Race> {
         // Récupération de la valeur
         let localRace: Race = null;
@@ -36,5 +48,6 @@ export class ChoixRaceService {
             localRace
         ));
     }
+
 
 }
