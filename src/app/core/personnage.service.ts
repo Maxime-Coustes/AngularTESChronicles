@@ -16,6 +16,7 @@ export class PersonnageService {
     }
 
     get() {
+        console.log(' getPersonnage from get() in personnageService', this.localStorageService.getObject('personnage'));
         return this.localStorageService.getObject('personnage');
     }
 

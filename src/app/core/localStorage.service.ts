@@ -6,9 +6,6 @@ import { Observable } from 'rxjs/Observable';
 
 export class LocalStorageService {
 
-    // créer une méthode serialize
-    // petit commentaire pour commit
-
     getObject(key: string): any {
         if (!this.getItem(key)) {
             return false;
