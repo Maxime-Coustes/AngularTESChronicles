@@ -11,8 +11,8 @@ const routes: Routes = [
     { path: 'classe/generationCarac', component: GenerationCaracComponent },
     { path: 'classe', component: ChoixClasseComponent },
     { path: 'classe/generationCarac/identite', component: IdentiteComponent },
-    { path: 'classe/generationCarac/identite/resume', component: PersonnageComponent },
-    { path: 'classe/generationCarac/identite/race/resume', component: PersonnageComponent },
+/*     { path: 'classe/generationCarac/identite/resume', component: PersonnageComponent },
+ */    { path: 'classe/generationCarac/identite/race/resume', component: PersonnageComponent },
     { path: 'classe/generationCarac/identite/race', component: RaceComponent },
     { path: '', component: HomeComponent },
     // { path: 'classe/generationCarac/identite/resume/departArgent', component: ArgentDepartComponent}
