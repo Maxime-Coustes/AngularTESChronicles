@@ -1,23 +1,25 @@
 <p>
-  personnage works!
-</p>
-
-<p>
   Vous souhaitez donc créer un
   <span>{{personnageDTO.classe.nom}}.</span> 
 </p>
 <p>
-  issu du peuple :  <!--  réponse error :  "personnageDTO.race undefined" -->
+  issu du peuple : 
   <span>{{personnageDTO.race.nom}}.</span>
 </p>
 <p>
   du nom de <span> {{personnageDTO.identite.prenom}} {{personnageDTO.identite.nom}},</span>
 </p>
-<p>
-  et dont les caractéristiques sont: 
-</p>
 
-<div class="container no-gutters">
+<div class="row">
+  <div class="col-md-6">
+    dont les caractéristiques sont: 
+  </div>
+  <div class="col-md-6">
+    et dont les modificateurs raciaux sont:
+    <div>{{personnageDTO.race.modifCarac}}</div>
+</div>
+
+<div class="container ">
   <div>
     <span>{{personnageDTO.caracteristiques[0].nom}}</span>
     <span>{{personnageDTO.caracteristiques[0].valeur}}</span>
@@ -43,21 +45,16 @@
     <span>{{personnageDTO.caracteristiques[5].valeur}}</span>
   </div>
 </div>
-<br>
-<p>penser à l'ajustement racial en premier lieu</p>
-<p>et peut être au calcul du poids transportable</p>
-<br>
-<p>ensuite vient le lien vers le tirage des pièces d'or en fonction de la classe.</p>
-<p>puis l'affichage des objets et équipements d'aventurier niv 1 en fonction de la classe toujours</p>
-<p>penser au "controleur" qui va soustraire la valeur des équipements achetés à la somme tirée </p>
-<p>et à celui qui additionne le poids de l'équipement </p>
 
-
-<div>
+<div class="row">
+  <p>Penser à l'ajustement racial en premier lieu</p>
+  <p>et peut être au calcul du poids transportable</p>
   <br>
-  <!-- <a class="button" routerLink="/departArgent">Ensuite, place aux achats !</a> -->
-  <br>
-<span>En tant que {{personnageDTO.classe.nom}}.</span>
-<p>vous disposez de {{personnageDTO.classe.argentDepart}} pièces d'or</p>
+  <p>ensuite vient le lien vers le tirage des pièces d'or en fonction de la classe.</p>
+  <p>puis l'affichage des objets et équipements d'aventurier niv 1 en fonction de la classe toujours</p>
+  <p>penser au "controleur" qui va soustraire la valeur des équipements achetés à la somme tirée </p>
+  <p>et à celui qui additionne le poids de l'équipement </p>
 
+  <p>En tant que {{personnageDTO.classe.nom}}.</p>
+  <p>vous disposez de {{personnageDTO.classe.argentDepart}} pièces d'or</p>
 </div>
