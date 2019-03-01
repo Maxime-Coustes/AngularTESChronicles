@@ -9,8 +9,13 @@
 <br>
 
 <button (click)="generateD20()"> test D20: </button>
-<div *ngIf="resultatGenere" style="margin-left: 50px"class="col-lg-1 emplacementCarac">
+
+ <div *ngIf="resultatGenere >= 16" style="margin-left: 50px; color: darkgreen" class="col-lg-1 emplacementCarac">
   {{resultatGenere}}</div>
+  <div *ngIf="resultatGenere >= 10 && resultatGenere < 16" style="margin-left: 50px" class="col-lg-1 emplacementCarac">
+    {{resultatGenere}}</div>
+    <div *ngIf="resultatGenere < 10" style="margin-left: 50px; color: darkred" class="col-lg-1 emplacementCarac">
+      {{resultatGenere}}</div>
 <br>
 <button (click)="generate4D6()"> test 4D6 (trois plus grandes valeurs): </button>
 <br>
@@ -22,7 +27,7 @@
     <div class="row no-gutters">
       <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{caracs.caracteristiques[index].nom}}</div>
       <div class="col emplacementCarac" style="padding: 5px; border: 1px solid;">{{sortableCarac[index]}}</div>
-      <div class="col emplacementCarac">{{sortableCarac[index] | modifCarac }}</div>
+      <div *ngIf="resultatGenere " class="col emplacementCarac">{{sortableCarac[index] | modifCarac }}</div>
     </div>
   </ng-template>
   
