@@ -1,9 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ArmeCouranteCollection } from 'app/feature/arme/in-memory-data-arme-courante';
+import { ArmeGuerreCollection } from 'app/feature/arme/in-memory-data-arme-de-guerre';
 import { Arme } from './arme';
 import { ProprieteMagiqueArme } from './in-memory-data-arme-propiete-magique';
 import { ProprieteMagique } from './propriete-magique';
-import { equal } from 'assert';
 
 @Component({
   selector: 'app-arme',
@@ -12,14 +12,21 @@ import { equal } from 'assert';
 })
 export class ArmeComponent implements OnInit {
 
-      @Input() arme: Arme;
+  @Input() arme: Arme;
+  @Input() armeGuerre: Arme;
   @Input() proprieteMagiqueGeneree: ProprieteMagique;
 
   constructor() { }
 
   ngOnInit() {
     this.arme = new Arme();
+    this.armeGuerre = new Arme();
     this.proprieteMagiqueGeneree = new ProprieteMagique();
+  }
+
+  generateArmeCouranteMagique(): void {
+    this.generateArmeCourante();
+    this.generateProprieteMagique();
   }
 
   generateArmeCourante(): void {
@@ -53,4 +60,18 @@ export class ArmeComponent implements OnInit {
     this.proprieteMagiqueGeneree = ProprieteMagiqueArme[proprieteMagique];
 
   }
+
+    /*generateArmeGuerreMagique(): void {
+    this.generateArmeDeGuerre();
+    this.generateProprieteMagique();
+  }*/
+
+  /*generateArmeDeGuerre(): void {
+    const armeGuerreIndex: number = Math.floor((Math.random() * 45) + 1);
+    console.log('generation d\'arme de guerre');
+    console.log('generation: ', ArmeGuerreCollection[armeGuerreIndex].nom);
+
+    this.armeGuerre = ArmeGuerreCollection[armeGuerreIndex];
+  }*/
+
 }
